@@ -28,6 +28,7 @@ class _MainPageState extends State<MainPage>
   Widget _buildListWidget() {
     var list = Arrays.mainList;
     return ListView.builder(
+        scrollDirection: Axis.vertical,
         itemCount: list.length,
         itemBuilder: (context, index) {
           print("azhansy,index=$index");
@@ -37,9 +38,12 @@ class _MainPageState extends State<MainPage>
 
   Widget _buildItemRow(HomePageModel model, int index) {
     return ListTile(
-        leading: Icon(
-          model.icon,
-          color: Colors.amberAccent,
+        leading: Hero(
+          tag: "book" + index.toString(),
+          child: Icon(
+            model.icon,
+            color: Colors.amberAccent,
+          ),
         ),
         title: Text(model.labelTxt),
         subtitle: Text(model.labelTxt.substring(0, 1)),

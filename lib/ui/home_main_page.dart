@@ -18,7 +18,7 @@ class _HomePageState extends State<HomeMainPage>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: _allPage.length, vsync: this);
+    _tabController = TabController(length: _allPage.length - 1, vsync: this);
   }
 
   final List<HomePageModel> _allPage = <HomePageModel>[
@@ -37,13 +37,12 @@ class _HomePageState extends State<HomeMainPage>
           //view
           body: TabBarView(
             controller: _tabController,
-            children: _allPage
-                .map((HomePageModel model) => buildTabView(context, model))
-                .toList(),
+            children:
+                _allPage.map((model) => buildTabView(context, model)).toList(),
           ),
           bottomNavigationBar: FABBottomAppBar(
               selectedColor: Theme.of(context).primaryColor,
-              onTabSelected: (int index) {
+              onTabSelected: (index) {
                 _tabController.animateTo(index);
               },
               items: _allPage
