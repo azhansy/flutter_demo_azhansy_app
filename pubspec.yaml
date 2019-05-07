@@ -48,16 +48,16 @@ flutter:
   #  - images/a_dot_ham.jpeg
   assets:
     - assets/story/image_01.png
-#    - assets/story/image_02.png
-#    - assets/story/image_03.png
-#    - assets/story/image_04.png
+    - assets/story/image_02.jpg
+    - assets/story/image_03.jpg
+    - assets/story/image_04.jpg
 
 
-  # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.io/assets-and-images/#resolution-aware.
+    # An image asset can refer to one or more resolution-specific "variants", see
+    # https://flutter.io/assets-and-images/#resolution-aware.
 
-  # For details regarding adding assets from package dependencies, see
-  # https://flutter.io/assets-and-images/#from-packages
+    # For details regarding adding assets from package dependencies, see
+    # https://flutter.io/assets-and-images/#from-packages
 
   # To add custom fonts to your application, add a fonts section here,
   # in this "flutter" section. Each entry in this list should have a
@@ -78,3 +78,9 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.io/custom-fonts/#from-packages
+
+  #注意不要有多余的空格，对空格很敏感
+  fonts:
+    - family: Calibre-Semibold
+      fonts:
+        - asset: assets/Calibre Semibold.otf
