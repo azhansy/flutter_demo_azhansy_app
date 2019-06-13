@@ -9,4 +9,12 @@ class Arrays {
     HomePageModel('music', Icons.library_music),
     HomePageModel('movie', Icons.movie),
   ];
+
+  ///列表 测试入口
+  static List<HomePageModel> drawerList = <HomePageModel>[
+    HomePageModel('test1', Icons.book),
+    HomePageModel('test2', Icons.radio),
+    HomePageModel('test3', Icons.library_music),
+    HomePageModel('test4', Icons.movie),
+  ];
 }
