@@ -26,6 +26,12 @@ dependencies:
   # Dart 常用工具类库 https://github.com/Sky24n/common_utils
   common_utils: ^1.1.1
 
+  flutter_bloc: ^0.15.0
+
+  rxdart: ^0.22.0
+
+  dio: ^2.1.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

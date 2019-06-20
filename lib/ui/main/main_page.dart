@@ -7,6 +7,7 @@ import 'package:flutter_demo_azhansy_app/ui/main/model/home_page_model.dart';
 import 'package:flutter_demo_azhansy_app/ui/movie/movie_app_ui_page.dart';
 import 'package:flutter_demo_azhansy_app/ui/music/music_app_ui_page.dart';
 import 'package:flutter_demo_azhansy_app/ui/story/story_app_ui_page.dart';
+import 'package:flutter_demo_azhansy_app/ui/test/bloc_app_ui_page.dart';
 import 'package:flutter_demo_azhansy_app/ui/test/test_app_ui_page.dart';
 
 ///首页
@@ -32,7 +33,7 @@ class _MainPageState extends State<MainPage>
         scrollDirection: Axis.vertical,
         itemCount: list.length,
         itemBuilder: (context, index) {
-          print("azhansy,index=$index");
+//          print("azhansy,index=$index");
           return _buildItemRow(list[index], index);
         });
   }
@@ -67,6 +68,8 @@ class _MainPageState extends State<MainPage>
       NavigatorUtil.pushPage2Material(context, MovieAppUiPage());
     } else if (index == 4) {
       NavigatorUtil.pushPage2Material(context, TestAppUiPage());
+    } else if (index == 5) {
+      NavigatorUtil.pushPage2Material(context, BlocAppUiPage());
     }
   }
 }
