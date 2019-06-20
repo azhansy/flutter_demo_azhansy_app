@@ -7,6 +7,7 @@ import 'package:flutter_demo_azhansy_app/ui/main/model/home_page_model.dart';
 import 'package:flutter_demo_azhansy_app/ui/movie/movie_app_ui_page.dart';
 import 'package:flutter_demo_azhansy_app/ui/music/music_app_ui_page.dart';
 import 'package:flutter_demo_azhansy_app/ui/story/story_app_ui_page.dart';
+import 'package:flutter_demo_azhansy_app/ui/test/test_app_ui_page.dart';
 
 ///首页
 class MainPage extends StatefulWidget {
@@ -64,6 +65,8 @@ class _MainPageState extends State<MainPage>
       NavigatorUtil.pushPage2Cupertino(context, MusicAppUiPage());
     } else if (index == 3) {
       NavigatorUtil.pushPage2Material(context, MovieAppUiPage());
+    } else if (index == 4) {
+      NavigatorUtil.pushPage2Material(context, TestAppUiPage());
     }
   }
 }

@@ -8,6 +8,7 @@ class Arrays {
     HomePageModel('adidas', Icons.radio),
     HomePageModel('music', Icons.library_music),
     HomePageModel('movie', Icons.movie),
+    HomePageModel('test', Icons.edit),
   ];
 
   ///列表 测试入口
