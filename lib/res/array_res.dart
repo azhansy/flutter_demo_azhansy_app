@@ -10,6 +10,7 @@ class Arrays {
     HomePageModel('movie', Icons.movie),
     HomePageModel('test', Icons.edit),
     HomePageModel('block', Icons.book),
+    HomePageModel('wan_android', Icons.book),
   ];
 
   ///列表 测试入口

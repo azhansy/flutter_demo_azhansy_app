@@ -9,6 +9,7 @@ import 'package:flutter_demo_azhansy_app/ui/music/music_app_ui_page.dart';
 import 'package:flutter_demo_azhansy_app/ui/story/story_app_ui_page.dart';
 import 'package:flutter_demo_azhansy_app/ui/test/bloc_app_ui_page.dart';
 import 'package:flutter_demo_azhansy_app/ui/test/test_app_ui_page.dart';
+import 'package:flutter_demo_azhansy_app/ui/wanandroid/wan_android_page.dart';
 
 ///首页
 class MainPage extends StatefulWidget {
@@ -70,6 +71,8 @@ class _MainPageState extends State<MainPage>
       NavigatorUtil.pushPage2Material(context, TestAppUiPage());
     } else if (index == 5) {
       NavigatorUtil.pushPage2Material(context, BlocAppUiPage());
+    } else if (index == 6) {
+      NavigatorUtil.pushPage2Material(context, WanAndroidPage());
     }
   }
 }
