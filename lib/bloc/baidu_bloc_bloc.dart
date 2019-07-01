@@ -15,11 +15,13 @@ class BaiduBlocBloc extends Bloc<BaiduBlocEvent, BaiduBlocState> {
   ) async* {
     print("接收Bloc=====");
 
-    if (event is BaiduBlocEvent) {
-      print("接收到 BaiduBlocEvent===== ");
-//      await Future.delayed(Duration(seconds: 2));
+    if (event is BaiduBlocImplEvent) {
+      print("接收到 BaiduBlocImplEvent===== ");
+      await Future.delayed(Duration(seconds: 2));
       Dio dio = new Dio();
-      Response response = await dio.get("https://www.baidu.com/");
+      print("bloc begin request data.");
+
+      Response response = await dio.get("https://www.baidu.com");
       print("bloc 请求接口===== 数据=" + response.data);
       yield BaiduBlocImplState(response.data);
     }
