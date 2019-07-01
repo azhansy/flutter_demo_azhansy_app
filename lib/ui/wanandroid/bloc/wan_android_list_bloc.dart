@@ -17,7 +17,7 @@ class WanAndroidListBloc
     if (event is WanAndroidListImplEvent) {
       print("接收 请求的 WanAndroidListImplEvent=====");
       var result = await HttpUtil.get("article/list/0/json");
-      print("bloc 请求接口===== 数据=" + result["datas"]);
+      print("bloc 请求接口===== 数据=" + result.toString());
       yield WanAndroidListImplState(result["datas"]);
     }
   }

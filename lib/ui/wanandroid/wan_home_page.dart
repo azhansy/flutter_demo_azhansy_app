@@ -17,25 +17,25 @@ class _WanHomePageState extends State<WanHomePage> {
   @override
   void initState() {
     super.initState();
-    getData();
+//    getData();
     _listBloc = WanAndroidListBloc();
-//    _listBloc.dispatch(WanAndroidListImplEvent());
+    _listBloc.dispatch(WanAndroidListImplEvent());
   }
 
   @override
   Widget build(BuildContext context) {
-    return
-      ListView.builder(
-        itemCount: _list.length,
-        itemBuilder: (BuildContext context, int index) {
-          return WanHomeItemWidget(_list[index]);
-        });
-//    return BlocBuilder(
-//      bloc: _listBloc,
-//      builder: (context, state) {
-//        return buildStateWidget(state);
-//      },
-//    );
+//    return
+//      ListView.builder(
+//        itemCount: _list.length,
+//        itemBuilder: (BuildContext context, int index) {
+//          return WanHomeItemWidget(_list[index]);
+//        });
+    return BlocBuilder(
+      bloc: _listBloc,
+      builder: (context, state) {
+        return buildStateWidget(state);
+      },
+    );
   }
 
   Widget buildStateWidget(state) {
@@ -63,12 +63,12 @@ class _WanHomePageState extends State<WanHomePage> {
     }
   }
 
-  void getData() async {
-    print("getData= begin=====");
-    var data =
-        await HttpUtil.get("https://www.wanandroid.com/article/list/0/json");
-    print("getData= end");
-    _list.addAll(data["datas"]);
-    setState(() {});
-  }
+//  void getData() async {
+//    print("getData= begin=====");
+//    var data =
+//        await HttpUtil.get("https://www.wanandroid.com/article/list/0/json");
+//    print("getData= end");
+//    _list.addAll(data["datas"]);
+//    setState(() {});
+//  }
 }
